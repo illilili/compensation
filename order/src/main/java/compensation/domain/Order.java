@@ -72,7 +72,7 @@ private String address;
 
 
 //<<< Clean Arch / Port Method
-    public static void updateStatus(OutStock outStock){
+    public static void updateStatus(OutOfStock outOfStock){
         
         //implement business logic here:
         
@@ -85,7 +85,7 @@ private String address;
         /** Example 2:  finding and process
         
 
-        repository().findById(outStock.get???()).ifPresent(order->{
+        repository().findById(outOfStock.get???()).ifPresent(order->{
             
             order // do something
             repository().save(order);

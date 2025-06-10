@@ -2,7 +2,7 @@ package compensation.domain;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import compensation.InventoryApplication;
-import compensation.domain.OutStock;
+import compensation.domain.OutOfStock;
 import compensation.domain.StockDecreased;
 import java.time.LocalDate;
 import java.util.Collections;
@@ -41,8 +41,8 @@ public class Inventory {
 
         StockDecreased stockDecreased = new StockDecreased(inventory);
         stockDecreased.publishAfterCommit();
-        OutStock outStock = new OutStock(inventory);
-        outStock.publishAfterCommit();
+        OutOfStock outOfStock = new OutOfStock(inventory);
+        outOfStock.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -55,8 +55,8 @@ public class Inventory {
 
             StockDecreased stockDecreased = new StockDecreased(inventory);
             stockDecreased.publishAfterCommit();
-            OutStock outStock = new OutStock(inventory);
-            outStock.publishAfterCommit();
+            OutOfStock outOfStock = new OutOfStock(inventory);
+            outOfStock.publishAfterCommit();
 
          });
         */

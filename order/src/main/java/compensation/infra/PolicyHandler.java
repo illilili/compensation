@@ -25,12 +25,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='OutStock'"
+        condition = "headers['type']=='OutOfStock'"
     )
-    public void wheneverOutStock_UpdateStatus(@Payload OutStock outStock) {
-        OutStock event = outStock;
+    public void wheneverOutOfStock_UpdateStatus(
+        @Payload OutOfStock outOfStock
+    ) {
+        OutOfStock event = outOfStock;
         System.out.println(
-            "\n\n##### listener UpdateStatus : " + outStock + "\n\n"
+            "\n\n##### listener UpdateStatus : " + outOfStock + "\n\n"
         );
 
         // Sample Logic //
